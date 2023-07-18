@@ -1,0 +1,9 @@
+{
+  "image": "ubuntu:latest",
+  "extensions": ["ms-vscode.cpptools"],
+  "runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
+  "postCreateCommand": "apt-get update && apt-get install -y git build-essential cmake ffmpeg libopencv-dev nasm libxvidcore-dev libass-dev libfdk-aac-dev libvpx-dev libx264-dev",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
